@@ -58,7 +58,20 @@ module.exports = {
   /*
    ** Nuxt.js modules
    */
-  modules: [],
+  modules: [
+    [
+      'nuxt-mq',
+      {
+        // Default breakpoint for SSR
+        defaultBreakpoint: 'default',
+        breakpoints: {
+          sm: 550,
+          md: 1250,
+          lg: Infinity,
+        },
+      },
+    ],
+  ],
 
   /*
    ** Build configuration
